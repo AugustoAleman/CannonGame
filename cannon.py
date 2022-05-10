@@ -1,11 +1,10 @@
-"""Cannon, hitting targets with projectiles.
+"""
+GAME: Cannon.
+AUTHOR 1: Carla Onate Gardella.
+AUTHOR 2: Octavio Augusto Aleman Esparza.
 
-Exercises
+DATE: May - 10 - 2022.
 
-1. Keep score by counting target hits.
-2. Vary the effect of gravity.
-3. Apply gravity to the targets.
-4. Change the speed of the ball.
 """
 
 from random import randrange
@@ -55,8 +54,8 @@ def move():
         targets.append(target)
 
     for target in targets:
-        target.x -= 0.5
-
+        target.x -= randrange(1, 3, 1)
+        
     if inside(ball):
         speed.y -= 0.35
         ball.move(speed)
