@@ -70,8 +70,10 @@ def move():
     draw()
 
     for target in targets:
-        if not inside(target):
-            return
+        if not inside(target): # if dot not inside canvas
+            target.x = 250 # reset x to initial position
+            target.y = randrange(-150, 150) # set y to random position in canvas
+            # remove return so that the game doesn't end
 
     ontimer(move, 50)
 
